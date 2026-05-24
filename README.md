@@ -19,7 +19,8 @@ Open `public/index.html` in a browser.
 wrangler pages deploy public --project-name mickcodex
 ```
 
+Live site: https://mickcodex.pages.dev/
+
 ## Repository
 
 https://github.com/mickcoco987/MickCodex
-
