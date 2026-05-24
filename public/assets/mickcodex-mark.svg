@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">MickCodex mark</title>
+  <desc id="desc">A compact geometric launchpad mark for MickCodex.</desc>
+  <rect width="256" height="256" rx="36" fill="#f8fbfa"/>
+  <path d="M42 181V75l86 53 86-53v106l-86-53-86 53Z" fill="#147d73"/>
+  <path d="M69 138V94l35 22-35 22Zm118 0-35-22 35-22v44Z" fill="#f8fbfa"/>
+  <path d="M92 177h72l-36-22-36 22Z" fill="#d85d45"/>
+  <path d="M91 79h74l-37 23-37-23Z" fill="#d9a441"/>
+</svg>
+

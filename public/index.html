@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="MickCodex launchpad for GitHub and Cloudflare projects.">
+    <title>MickCodex Launchpad</title>
+    <link rel="icon" href="./assets/mickcodex-mark.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./styles.css?v=1">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="masthead" aria-labelledby="page-title">
+        <div class="brand-row">
+          <img src="./assets/mickcodex-mark.svg" alt="" class="brand-mark" width="64" height="64">
+          <div>
+            <p class="eyebrow">GitHub + Cloudflare</p>
+            <h1 id="page-title">MickCodex Launchpad</h1>
+          </div>
+        </div>
+        <p class="lede">
+          A first clean workspace for publishing small web projects from GitHub to Cloudflare Pages.
+        </p>
+        <div class="actions" aria-label="Project links">
+          <a class="button primary" href="https://github.com/mickcoco987/MickCodex">Repository</a>
+          <a class="button ghost" href="#deploy">Deploy</a>
+        </div>
+      </section>
+
+      <section class="status-band" aria-label="Project status">
+        <article>
+          <span class="status-dot ready"></span>
+          <strong>GitHub</strong>
+          <p>Repository ready</p>
+        </article>
+        <article>
+          <span class="status-dot ready"></span>
+          <strong>Wrangler</strong>
+          <p>CLI installed</p>
+        </article>
+        <article>
+          <span class="status-dot next"></span>
+          <strong>Cloudflare</strong>
+          <p>Ready to deploy</p>
+        </article>
+      </section>
+
+      <section class="workspace-grid" aria-label="Project workspace">
+        <div class="panel checklist-panel">
+          <div class="panel-heading">
+            <p class="eyebrow">Launch checklist</p>
+            <h2>First steps</h2>
+          </div>
+          <ul class="checklist" id="checklist">
+            <li>
+              <label>
+                <input type="checkbox" data-task="repo" checked>
+                <span>GitHub repo created</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-task="wrangler" checked>
+                <span>Wrangler installed and logged in</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-task="first-files" checked>
+                <span>First files committed</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-task="deploy">
+                <span>First Cloudflare Pages deploy</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="panel command-panel" id="deploy">
+          <div class="panel-heading">
+            <p class="eyebrow">Cloudflare Pages</p>
+            <h2>Deploy command</h2>
+          </div>
+          <div class="command-row">
+            <code>wrangler pages deploy public --project-name mickcodex</code>
+            <button class="icon-button" type="button" id="copy-command" aria-label="Copy deploy command" title="Copy deploy command">
+              <span class="copy-icon" aria-hidden="true"></span>
+            </button>
+          </div>
+          <p class="hint" id="copy-status" role="status" aria-live="polite">Ready when the first commit is on GitHub.</p>
+        </div>
+
+        <div class="panel notes-panel">
+          <div class="panel-heading">
+            <p class="eyebrow">Next idea</p>
+            <h2>Make it useful</h2>
+          </div>
+          <p>
+            Turn this starter into a real dashboard, a client landing page, or a small internal tool.
+            The repository is intentionally simple so each new idea can be added without setup friction.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js?v=1"></script>
+  </body>
+</html>
