@@ -6,7 +6,7 @@
     <meta name="description" content="Pré-évaluation informative du TDAH pour préparer une consultation professionnelle.">
     <title>Pré-évaluation TDAH</title>
     <link rel="icon" href="../assets/mickcodex-mark.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="./styles.css?v=1">
+    <link rel="stylesheet" href="./styles.css?v=2">
   </head>
   <body>
     <main class="tdah-shell">
@@ -104,6 +104,20 @@
             <p id="result-text">
               Remplis les sections, puis génère un résumé. Les réponses restent dans ton navigateur et ne sont pas envoyées à un serveur.
             </p>
+            <div class="insight-grid" id="insight-grid" aria-label="Avis d’orientation">
+              <article>
+                <span>Profil</span>
+                <strong id="profile-label">Non évalué</strong>
+              </article>
+              <article>
+                <span>Cas proche</span>
+                <strong id="case-label">À préciser</strong>
+              </article>
+              <article>
+                <span>Retentissement</span>
+                <strong id="impact-label">À documenter</strong>
+              </article>
+            </div>
             <div class="meter" aria-hidden="true">
               <span id="meter-fill"></span>
             </div>
@@ -131,6 +145,6 @@
       </section>
     </main>
 
-    <script src="./script.js?v=1"></script>
+    <script src="./script.js?v=2"></script>
   </body>
 </html>

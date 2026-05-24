@@ -336,6 +336,35 @@ input:focus-visible {
   line-height: 1.55;
 }
 
+.insight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 18px 0;
+}
+
+.insight-grid article {
+  min-height: 82px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+  background: var(--surface);
+}
+
+.insight-grid span {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 850;
+}
+
+.insight-grid strong {
+  display: block;
+  font-size: 0.98rem;
+  line-height: 1.22;
+}
+
 .meter {
   overflow: hidden;
   height: 10px;
@@ -454,6 +483,10 @@ pre {
   }
 
   .scale-options {
+    grid-template-columns: 1fr;
+  }
+
+  .insight-grid {
     grid-template-columns: 1fr;
   }
 }
