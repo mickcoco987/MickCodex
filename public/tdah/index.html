@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Pré-évaluation informative du TDAH pour préparer une consultation professionnelle.">
+    <title>Pré-évaluation TDAH</title>
+    <link rel="icon" href="../assets/mickcodex-mark.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./styles.css?v=1">
+  </head>
+  <body>
+    <main class="tdah-shell">
+      <section class="hero" aria-labelledby="page-title">
+        <nav class="topbar" aria-label="Navigation">
+          <a class="brand-link" href="../">
+            <img src="../assets/mickcodex-mark.svg" alt="" width="42" height="42">
+            <span>MickCodex</span>
+          </a>
+          <a class="repo-link" href="https://github.com/mickcoco987/MickCodex">GitHub</a>
+        </nav>
+
+        <div class="hero-grid">
+          <div>
+            <p class="eyebrow">Pré-évaluation informative</p>
+            <h1 id="page-title">TDAH adulte</h1>
+            <p class="lede">
+              Note tes difficultés, les contextes concernés et les éléments d’histoire personnelle pour
+              préparer un échange plus clair avec un professionnel de santé.
+            </p>
+          </div>
+          <div class="safety-card" role="note" aria-label="Avertissement médical">
+            <strong>Ce n’est pas un diagnostic.</strong>
+            <p>
+              Un diagnostic de TDAH demande une évaluation clinique complète. Cet outil aide seulement à
+              organiser tes observations avant une consultation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="assessment-grid" aria-label="Pré-évaluation">
+        <form class="assessment-panel" id="assessment-form">
+          <div class="section-heading">
+            <p class="eyebrow">Depuis les 6 derniers mois</p>
+            <h2>Fréquence des difficultés</h2>
+          </div>
+
+          <div class="scale-head" aria-hidden="true">
+            <span></span>
+            <span>Jamais</span>
+            <span>Parfois</span>
+            <span>Souvent</span>
+            <span>Très souvent</span>
+          </div>
+
+          <div class="question-list" id="question-list"></div>
+
+          <div class="section-heading compact">
+            <p class="eyebrow">Retentissement</p>
+            <h2>Contextes touchés</h2>
+          </div>
+          <div class="choice-grid" id="context-list">
+            <label><input type="checkbox" value="Travail ou études"> Travail ou études</label>
+            <label><input type="checkbox" value="Maison et tâches administratives"> Maison et administratif</label>
+            <label><input type="checkbox" value="Relations et vie sociale"> Relations et vie sociale</label>
+            <label><input type="checkbox" value="Budget, rendez-vous ou organisation"> Budget, rendez-vous, organisation</label>
+          </div>
+
+          <div class="section-heading compact">
+            <p class="eyebrow">Histoire</p>
+            <h2>Indices depuis l’enfance</h2>
+          </div>
+          <div class="choice-grid" id="history-list">
+            <label><input type="checkbox" value="Difficultés d’attention à l’école"> Difficultés d’attention à l’école</label>
+            <label><input type="checkbox" value="Remarques fréquentes sur agitation ou impulsivité"> Remarques sur agitation ou impulsivité</label>
+            <label><input type="checkbox" value="Oublis, désorganisation ou devoirs non rendus"> Oublis, désorganisation, devoirs non rendus</label>
+            <label><input type="checkbox" value="Même type de difficultés avant 12 ans"> Difficultés similaires avant 12 ans</label>
+          </div>
+
+          <div class="section-heading compact">
+            <p class="eyebrow">À différencier</p>
+            <h2>Facteurs à mentionner</h2>
+          </div>
+          <div class="choice-grid" id="factor-list">
+            <label><input type="checkbox" value="Sommeil insuffisant ou irrégulier"> Sommeil insuffisant ou irrégulier</label>
+            <label><input type="checkbox" value="Anxiété, humeur basse ou stress important"> Anxiété, humeur basse ou stress important</label>
+            <label><input type="checkbox" value="Substances, médicaments ou consommation problématique"> Substances, médicaments ou consommation problématique</label>
+            <label><input type="checkbox" value="Problème médical ou fatigue persistante"> Problème médical ou fatigue persistante</label>
+          </div>
+
+          <label class="notes-label" for="notes">Notes libres pour la consultation</label>
+          <textarea id="notes" rows="5" placeholder="Exemples concrets, conséquences, questions à poser..."></textarea>
+
+          <div class="form-actions">
+            <button type="submit" class="button primary">Générer le résumé</button>
+            <button type="button" class="button ghost" id="reset-form">Effacer</button>
+          </div>
+        </form>
+
+        <aside class="result-panel" aria-label="Résumé">
+          <div class="result-card">
+            <p class="eyebrow">Synthèse</p>
+            <h2 id="result-title">À compléter</h2>
+            <p id="result-text">
+              Remplis les sections, puis génère un résumé. Les réponses restent dans ton navigateur et ne sont pas envoyées à un serveur.
+            </p>
+            <div class="meter" aria-hidden="true">
+              <span id="meter-fill"></span>
+            </div>
+          </div>
+
+          <div class="summary-card">
+            <div class="summary-header">
+              <h2>Résumé copiable</h2>
+              <button type="button" class="icon-button" id="copy-summary" aria-label="Copier le résumé" title="Copier le résumé">
+                <span class="copy-icon" aria-hidden="true"></span>
+              </button>
+            </div>
+            <pre id="summary-output">Le résumé apparaîtra ici.</pre>
+            <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+          </div>
+
+          <div class="sources-card">
+            <p class="eyebrow">Références</p>
+            <a href="https://www.cdc.gov/adhd/diagnosis/index.html">CDC</a>
+            <a href="https://www.nimh.nih.gov/health/publications/attention-deficit-hyperactivity-disorder-what-you-need-to-know">NIMH</a>
+            <a href="https://www.nice.org.uk/guidance/ng87/chapter/recommendations">NICE</a>
+            <a href="https://datashare.nida.nih.gov/instrument/adult-adhd-self-report-rating-scale">ASRS / NIDA</a>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="./script.js?v=1"></script>
+  </body>
+</html>
